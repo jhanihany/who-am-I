@@ -304,20 +304,43 @@ input {
   height: 42px;
   display: flex;
   align-items: center;
-  gap: 26px;
-  animation: marquee 26s linear infinite;
+  animation: marquee 24s linear infinite;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .14em;
 }
 
+.marquee-group {
+  min-width: 100vw;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 26px;
+
+  padding-right: 26px;
+}
+
 .marquee-track i {
   color: #8f9498;
   font-style: normal;
+  flex-shrink: 0;
+}
+
+.marquee-track span {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 @keyframes marquee {
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .about,
