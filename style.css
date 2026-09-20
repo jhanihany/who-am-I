@@ -1133,3 +1133,43 @@ input {
     transform: none;
   }
 }
+
+.education-content {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 105px;
+  gap: 24px;
+  align-items: center;
+}
+
+.education-text {
+  min-width: 0;
+}
+
+.education-text strong {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 19px;
+  line-height: 1.45;
+  letter-spacing: -0.03em;
+}
+
+.education-text p {
+  margin: 10px 0 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.education-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-logo img {
+  width: 82px;
+  max-height: 105px;
+  object-fit: contain;
+  display: block;
+}
