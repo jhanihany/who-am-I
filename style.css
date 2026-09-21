@@ -169,6 +169,10 @@ input {
   padding: 52px 0 58px;
 }
 
+.hero-panel {
+  margin-top: 27px;
+}
+
 .hero-kicker,
 .card-label,
 .micro-label,
@@ -533,7 +537,7 @@ input {
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
 }
 
