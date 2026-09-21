@@ -253,23 +253,23 @@ input {
 
 @keyframes titleFlipA {
   0%,
-  30% {
+  32% {
     opacity: 1;
     transform: translateY(0) rotateX(0deg);
   }
 
-  50% {
+  40% {
     opacity: 0;
     transform: translateY(18px) rotateX(-90deg);
   }
 
-  69%,
-  70% {
+  40%,
+  82% {
     opacity: 0;
     transform: translateY(-18px) rotateX(90deg);
   }
 
-  98%,
+  90%,
   100% {
     opacity: 1;
     transform: translateY(0) rotateX(0deg);
@@ -278,18 +278,18 @@ input {
 
 @keyframes titleFlipB {
   0%,
-  30% {
+  40% {
     opacity: 0;
     transform: translateY(-18px) rotateX(90deg);
   }
 
-  50%,
-  70% {
+  48%,
+  74% {
     opacity: 1;
     transform: translateY(0) rotateX(0deg);
   }
 
-  98%,
+  82%,
   100% {
     opacity: 0;
     transform: translateY(18px) rotateX(-90deg);
