@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="장한이의 금융·데이터 분석 포트폴리오" />
+  <meta name="theme-color" content="#0b0d10" />
+  <title>장한이 | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260921-desktopline6" />
+
+  <style>
+    /* ===== ABOUT section layout fix ===== */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 1fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .profile-intro {
+      min-height: 660px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-meta-grid {
+      margin-top: auto;
+      padding-top: 34px;
+      border-top: 1px solid var(--line, rgba(11,13,16,.14));
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(220px, .8fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .about-meta-column {
+      min-width: 0;
+    }
+
+    .skills-groups {
+      margin-top: 18px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .skill-group {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .skill-group-title {
+      padding-top: 9px;
+      color: #8b8e90;
+      font-size: 8px;
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .skill-group .skill-cloud {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .skill-group .skill-cloud span {
+      padding: 9px 11px;
+      white-space: nowrap;
+    }
+
+    .certification-column {
+      padding-left: 32px;
+      border-left: 1px solid var(--line, rgba(11,13,16,.14));
+    }
+
+    .certification-list {
+      margin-top: 18px;
+      display: grid;
+    }
+
+    .certification-item {
+      min-height: 45px;
+      display: grid;
+      grid-template-columns: 30px minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      border-bottom: 1px solid var(--line, rgba(11,13,16,.14));
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .certification-item:first-child {
+      border-top: 1px solid var(--line, rgba(11,13,16,.14));
+    }
+
+    .certification-no {
+      color: #999b9d;
+      font-family: "Manrope", sans-serif;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    @media (max-width: 900px) {
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-intro {
+        min-height: auto;
+      }
+
+      .about-meta-grid {
+        margin-top: 38px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .about-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .certification-column {
+        padding-left: 0;
+        padding-top: 28px;
+        border-left: 0;
+        border-top: 1px solid var(--line, rgba(11,13,16,.14));
+      }
+
+      .skill-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .skill-group-title {
+        padding-top: 0;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="맨 위로">
+      <span class="brand-mark">JH</span>
+      <span class="brand-name">JANG HANI</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+    </nav>
+
+    <a class="header-cta" href="#projects">View work <span>↘</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-eyebrow reveal">
+        <span class="status-dot"></span>
+        FINANCE · DATA · PRODUCT
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="hero-kicker">Portfolio / 2026</p>
+          <div class="hero-title-stage">
+            <h1 class="hero-title hero-title-a">
+              <span class="hero-segment hero-segment-solid">고객과 시장의 </span>
+              <span class="hero-segment hero-segment-solid">데이터를 읽고,</span>
+              <br class="hero-break-desktop" />
+              <span class="hero-segment hero-segment-outline">의사결정으로 </span>
+              <span class="hero-segment hero-segment-outline">연결합니다.</span>
+            </h1>
+          
+            <h1 class="hero-title hero-title-b">
+              #FINANCE<br />
+              <span>#DATA</span>
+            </h1>
+          </div>
+          <p class="hero-description">
+            금융 데이터를 바탕으로 고객·시장·리스크를 분석하고,<br>분석 결과를 실제 의사결정과 서비스로 연결합니다.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">프로젝트 보기 <span>↓</span></a>
+            <a class="btn btn-ghost" href="#about">프로필 보기</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="프로필 요약">
+          <div class="monogram" aria-hidden="true">
+            <span>J</span><span>H</span>
+          </div>
+          <div class="hero-panel-bottom">
+            <div>
+              <p class="micro-label">NAME</p>
+              <strong>장한이</strong>
+            </div>
+            <div>
+              <p class="micro-label">FOCUS</p>
+              <strong>Finance × Data</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          
+          <div class="marquee-group">
+            <span>FINANCIAL DATA ANALYSIS</span><i>✦</i>
+            <span>MACHINE LEARNING</span><i>✦</i>
+            <span>FIXED INCOME</span><i>✦</i>
+          <span>DATA VISUALIZATION</span><i>✦</i>
+          </div>
+
+          <div class="marquee-group">
+            <span>FINANCIAL DATA ANALYSIS</span><i>✦</i>  
+            <span>MACHINE LEARNING</span><i>✦</i>
+            <span>FIXED INCOME</span><i>✦</i>
+            <span>DATA VISUALIZATION</span><i>✦</i>
+          </div>   
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-number">01 / ABOUT</p>
+          <h2>Profile</h2>
+        </div>
+      </div>
+      
+      <div class="profile-grid">
+        <article class="profile-card profile-intro reveal">
+          <p class="card-label">ABOUT ME</p>
+          <h3>
+            분석에서 끝나지 않고<br />
+            <span>작동하는 결과물</span>까지 만듭니다.
+          </h3>
+          <p>
+            금융 데이터와 머신러닝을 활용해 문제를 구조화하고, 
+            분석 결과가 실제 의사결정과 서비스로 이어지도록 만드는 데 관심이 있습니다.
+          </p>
+
+          <div class="about-meta-grid">
+            <div class="about-meta-column">
+              <p class="card-label">SKILLS</p>
+
+              <div class="skills-groups">
+                <div class="skill-group">
+                  <span class="skill-group-title">PROGRAMMING</span>
+                  <div class="skill-cloud" aria-label="프로그래밍 기술">
+                    <span>Python</span>
+                    <span>R</span>
+                    <span>SAS</span>
+                    <span>SQL</span>
+                  </div>
+                </div>
+
+                <div class="skill-group">
+                  <span class="skill-group-title">ANALYSIS</span>
+                  <div class="skill-cloud" aria-label="분석 기술">
+                    <span>Machine Learning</span>
+                    <span>Financial Analysis</span>
+                  </div>
+                </div>
+
+                <div class="skill-group">
+                  <span class="skill-group-title">VISUALIZATION & APP</span>
+                  <div class="skill-cloud" aria-label="시각화 및 앱 기술">
+                    <span>Data Visualization</span>
+                    <span>Streamlit</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-meta-column certification-column">
+              <p class="card-label">CERTIFICATION</p>
+
+              <div class="certification-list">
+                <div class="certification-item">
+                  <span class="certification-no">01</span>
+                  <span>투자자산운용사</span>
+                </div>
+                <div class="certification-item">
+                  <span class="certification-no">02</span>
+                  <span>ADsP</span>
+                </div>
+                <div class="certification-item">
+                  <span class="certification-no">03</span>
+                  <span>OPIc AL</span>
+                </div>
+                <div class="certification-item">
+                  <span class="certification-no">04</span>
+                  <span>TOEIC 910</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="profile-stack">
+          <article class="profile-card reveal">
+            <p class="card-label">EDUCATION</p>
+            <div class="profile-row">
+              <div>
+                <strong>고려대학교</strong>
+                <strong>산업경영공학&금융공학융합전공</strong>
+                <p>2023.03 ~ 2027.02 졸업예정</p>
+              </div>
+
+              <div class="education-logo">
+                <img src="assets/koreauniv.webp" alt="고려대학교 로고">
+              </div>
+            </div>
+          </article>
+
+          <article class="profile-card reveal">
+            <p class="card-label">INTERESTS</p>
+            <div class="interest-list">
+              <span>Fixed Income & Macro</span>
+              <span>Financial Data Analysis</span>
+              <span>Credit & Risk Analytics</span>
+              <span>Machine Learning & AI</span>
+            </div>
+          </article>
+
+          <article class="profile-card reveal">
+            <p class="card-label">LINKS</p>
+            <div class="link-list">
+              <a href="https://github.com/jhanihany" target="_blank" rel="noopener noreferrer">
+                GitHub <span>↗</span>
+              </a>
+              <a href="https://blog.naver.com/lissadoo" target="_blank" rel="noopener noreferrer">
+                Blog <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <div class="section-heading reveal">
+        <p class="section-number">02 / EXPERIENCE</p>
+        <h2>Activities & Awards</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-body">
+            <p class="timeline-type">ACTIVITY</p>
+            <h3>FIND-A 금융데이터분석학회</h3>
+            <p>25.02 ~  · 총무 & 금융 데이터 분석 프로젝트 수행</p>
+          </div>
+        </article>
+
+        <article class="timeline-item timeline-placeholder reveal">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-body">
+            <p class="timeline-type">AWARD</p>
+            <h3>화성시 대학(원)생 도시데이터 연구공모전🏆</h3>
+            <p>챌린지상 · https://www.kyeonggi.com/article/20250619580123</p>
+          </div>
+        </article>
+
+        <article class="timeline-item timeline-placeholder reveal">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-body">
+            <p class="timeline-type">AWARD</p>
+            <h3>교보생명 혁신금융 아이디어 공모전🏆</h3>
+            <p>우수상</p>
+          </div>
+        </article>
+
+        <article class="timeline-item timeline-placeholder reveal">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-body">
+            <p class="timeline-type">SCHOLARSHIP</p>
+            <h3>운해장학재단 11기 장학생</h3>
+            <p>https://www.hankyung.com/article/202402260150h</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-body">
+            <p class="timeline-type">ACADEMIC PROJECT</p>
+            <h3>고대 × 연대 산업공학 학술교류제</h3>
+            <p>풋옵션의 과대평가 현상 분석</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-body">
+            <p class="timeline-type">ACTIVITY</p>
+            <h3>티치 포 코리아 - 관악학교</h3>
+            <p>24.03 ~ 25.02 · 수학교사 교육봉사 110시간</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-heading projects-heading reveal">
+        <div>
+          <p class="section-number">03 / SELECTED WORK</p>
+          <h2>Projects</h2>
+        </div>
+        <strong>프로젝트 카드를 선택하면 상세페이지로 이동합니다.</strong>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="프로젝트 필터">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="finance">FINANCE</button>
+        <button class="filter-btn" data-filter="ml">ML</button>
+        <button class="filter-btn" data-filter="data">DATA VIZ</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-kyobo reveal" data-category="finance">
+          <a class="project-link" href="https://jhanihany.github.io/kyobo-loan.github.io/" target="_blank" rel="noopener noreferrer" aria-label="교보문고 고객 대상 신용대출 서비스 프로젝트 열기">
+            <div class="project-visual">
+              <span class="project-number">01</span>
+              <div class="visual-copy">
+                <span>KYOBO</span>
+                <strong>My Data<br>× Finance</strong>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>FINANCE</span><span>PRODUCT</span><span>2026</span>
+              </div>
+              <h3>교보문고 고객 대상<br />신용대출 서비스</h3>
+              <p>
+                교보문고 고객 기반과 구매 데이터를 금융 서비스로 연결해
+                신규 고객 접점과 우대금리 구조를 제안한 금융상품 기획 프로젝트.
+              </p>
+              <div class="project-footer">
+                <span>Non-financial Data</span>
+                <span>VIEW PROJECT ↗</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card project-ards reveal" data-category="ml">
+          <a class="project-link" href="https://jhanihany.github.io/ARDS-prediction-model/" target="_blank" rel="noopener noreferrer" aria-label="ARDS Prediction Model 프로젝트 열기">
+            <div class="project-visual">
+              <span class="project-number">02</span>
+              <div class="visual-copy">
+                <span>HEALTHCARE AI</span>
+                <strong>12H Early<br>Prediction</strong>
+              </div>
+              <div class="metric-orbit">
+                <span>11,514</span>
+                <small>COHORT</small>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>HEALTHCARE</span><span>MACHINE LEARNING</span>
+              </div>
+              <h3>ARDS Prediction Model</h3>
+              <p>
+                ICU 시계열 데이터에서 향후 12시간 내 ARDS 발생을 예측.
+                임상기준 라벨링부터 6개 ML 모델과 LSTM·Transformer 비교까지.
+              </p>
+              <div class="project-footer">
+                <span>8 Models · ROC-AUC 0.949</span>
+                <span>VIEW PROJECT ↗</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card project-hwaseong reveal" data-category="data">
+          <a class="project-link" href="https://jhanihany.github.io/Hwaseong-City-Urban-Data-Research/" target="_blank" rel="noopener noreferrer" aria-label="화성시 어린이 안전지도 프로젝트 열기">
+            <div class="project-visual">
+              <span class="project-number">03</span>
+              <div class="map-lines" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="visual-copy">
+                <span>URBAN DATA</span>
+                <strong>Child Safety<br>Interactive Map</strong>
+              </div>
+              <span class="map-pin pin-a"></span>
+              <span class="map-pin pin-b"></span>
+              <span class="map-pin pin-c"></span>
+              <span class="project-arrow">↗</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>URBAN DATA</span><span>VISUALIZATION</span>
+              </div>
+              <h3>화성시 어린이 안전지도</h3>
+              <p>
+                도시 데이터를 공간적으로 분석해 지역별 어린이 안전 관련 결과를
+                한눈에 탐색할 수 있도록 만든 인터랙티브 지도 프로젝트.
+              </p>
+              <div class="project-footer">
+                <span>Interactive Map</span>
+                <span>VIEW PROJECT ↗</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card project-bond reveal" data-category="finance data">
+          <a class="project-link" href="https://bond-macro-dashboard-j12.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="Bond Macro Dashboard 프로젝트 열기">
+            <div class="project-visual">
+              <span class="project-number">04</span>
+              <div class="chart-visual" aria-hidden="true">
+                <svg viewBox="0 0 420 180" role="presentation">
+                  <path d="M0 132 C42 126 50 85 96 92 S164 128 205 84 S278 45 322 64 S377 93 420 36" fill="none" stroke="currentColor" stroke-width="3"/>
+                  <path d="M0 147 C68 139 83 116 136 120 S221 142 272 108 S342 90 420 100" fill="none" stroke="currentColor" stroke-width="1.3" opacity=".42"/>
+                </svg>
+              </div>
+              <div class="visual-copy">
+                <span>FIXED INCOME</span>
+                <strong>Bond & Macro<br>Dashboard</strong>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>FIXED INCOME</span><span>STREAMLIT</span>
+              </div>
+              <h3>Bond & Macro Dashboard</h3>
+              <p>
+                채권금리와 주요 거시경제 지표를 한 화면에서 추적하고
+                시장 흐름을 빠르게 확인하기 위해 만든 Streamlit 기반 모니터링 대시보드.
+              </p>
+              <div class="project-footer">
+                <span>Macro Monitoring</span>
+                <span>VIEW PROJECT ↗</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card project-coint reveal" data-category="finance data">
+          <a class="project-link"
+             href="https://jhanihany.github.io/cointegration-stat-arb-in-cryptomarket/"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Cointegration Statistical Arbitrage 프로젝트 열기">
+        
+            <div class="project-visual">
+              <span class="project-number">05</span>
+        
+              <div class="coint-symbol" aria-hidden="true">Σ</div>
+        
+              <div class="coint-lines" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+        
+              <div class="visual-copy">
+                <span>STATISTICAL ARBITRAGE</span>
+                <strong>Cointegration<br>Crypto Strategy</strong>
+              </div>
+        
+              <span class="project-arrow">↗</span>
+            </div>
+        
+            <div class="project-content">
+              <div class="project-meta">
+                <span>QUANT</span>
+                <span>COINTEGRATION</span>
+                <span>BACKTEST</span>
+              </div>
+        
+              <h3>Cointegration Statistical<br>Arbitrage</h3>
+        
+              <p>
+                Johansen 공적분 검정으로 암호화폐 평균회귀 바스켓을 선별하고,
+                1분봉·15분봉 Rolling OOS 백테스트를 통해
+                관계의 안정성과 거래비용 이후 수익성을 검증한 프로젝트.
+              </p>
+        
+              <div class="project-footer">
+                <span>Johansen · Rolling OOS</span>
+                <span>VIEW PROJECT ↗</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <div class="contact-card reveal">
+        <p class="section-number">04 / CONTACT</p>
+        <h2>데이터와 금융을 연결하는<br />다음 문제를 찾고 있습니다.</h2>
+        <div class="contact-bottom">
+          <p>
+            프로젝트와 경험에 대해 더 자세히 이야기하고 싶다면<br />
+            이메일 또는 GitHub를 통해 연락해 주세요.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:lisajang1121@gmail.com">EMAIL ↗</a>
+            <a href="https://github.com/jhanihany" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 JANG HANI</span>
+    <span>Built for GitHub Pages</span>
+    <a href="#top">BACK TO TOP ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
