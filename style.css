@@ -162,14 +162,20 @@ input {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.7fr .72fr;
+  grid-template-columns: minmax(0, 1.7fr) minmax(330px, .72fr);
   gap: 48px;
   align-items: start;
   margin: auto 0;
   padding: 52px 0 58px;
 }
 
+.hero-copy {
+  min-width: 0;
+}
+
 .hero-panel {
+  width: 100%;
+  min-width: 330px;
   margin-top: 27px;
 }
 
