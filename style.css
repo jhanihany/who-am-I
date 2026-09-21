@@ -216,7 +216,7 @@ input {
 
 /* 첫 번째 문구 */
 .hero-title-a {
-  font-size: clamp(42px, 4.1vw, 60px);
+  font-size: clamp(44px, 4.3vw, 64px);
   line-height: 1.08;
   letter-spacing: -.045em;
   animation: titleFlipA 3.5s cubic-bezier(.65, 0, .35, 1) infinite;
