@@ -170,6 +170,7 @@ input {
 }
 
 .hero-panel {
+  align-self: start;
   margin-top: 27px;
 }
 
