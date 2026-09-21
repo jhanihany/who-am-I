@@ -278,13 +278,13 @@ input {
 
 @keyframes titleFlipB {
   0%,
-  40% {
+  30% {
     opacity: 0;
     transform: translateY(-18px) rotateX(90deg);
   }
 
-  48%,
-  90% {
+  50%,
+  70% {
     opacity: 1;
     transform: translateY(0) rotateX(0deg);
   }
@@ -607,12 +607,6 @@ input {
   gap: 18px;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  transition: background .2s ease, padding .2s ease;
-}
-
-.timeline-item:hover {
-  padding: 0 18px;
-  background: rgba(255,255,255,.34);
 }
 
 .timeline-year {
