@@ -195,6 +195,108 @@ input {
   -webkit-text-stroke: 1.8px var(--ink);
 }
 
+/* =========================
+   HERO TITLE FLIP
+========================= */
+
+.hero-title-stage {
+  position: relative;
+  min-height: 3em;
+  perspective: 1200px;
+}
+
+.hero-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  margin: 17px 0 28px;
+
+  transform-origin: center bottom;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* 첫 번째 문구 */
+.hero-title-a {
+  animation: titleFlipA 8s
+    cubic-bezier(.65, 0, .35, 1)
+    infinite;
+}
+
+/* 두 번째 문구 */
+.hero-title-b {
+  animation: titleFlipB 8s
+    cubic-bezier(.65, 0, .35, 1)
+    infinite;
+}
+
+
+/* 첫 번째 → 두 번째 */
+@keyframes titleFlipA {
+
+  0%,
+  40% {
+    opacity: 1;
+    transform:
+      translateY(0)
+      rotateX(0deg);
+  }
+
+  48% {
+    opacity: 0;
+    transform:
+      translateY(18px)
+      rotateX(-90deg);
+  }
+
+  49%,
+  90% {
+    opacity: 0;
+    transform:
+      translateY(-18px)
+      rotateX(90deg);
+  }
+
+  98%,
+  100% {
+    opacity: 1;
+    transform:
+      translateY(0)
+      rotateX(0deg);
+  }
+}
+
+
+/* 두 번째 → 첫 번째 */
+@keyframes titleFlipB {
+
+  0%,
+  40% {
+    opacity: 0;
+    transform:
+      translateY(-18px)
+      rotateX(90deg);
+  }
+
+  48%,
+  90% {
+    opacity: 1;
+    transform:
+      translateY(0)
+      rotateX(0deg);
+  }
+
+  98%,
+  100% {
+    opacity: 0;
+    transform:
+      translateY(18px)
+      rotateX(-90deg);
+  }
+}
+
 .hero-description {
   max-width: 620px;
   margin: 0;
