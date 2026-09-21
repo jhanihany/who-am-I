@@ -1547,3 +1547,13 @@ input {
   }
 }
 
+/* 데스크톱 Hero 한글 문구 줄바꿈 고정 */
+@media (min-width: 621px) {
+  .hero-copy .hero-title-a {
+    white-space: nowrap;
+  }
+
+  .hero-title-a .hero-segment {
+    display: inline;
+  }
+}
