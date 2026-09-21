@@ -224,14 +224,14 @@ input {
 
 /* 첫 번째 문구 */
 .hero-title-a {
-  animation: titleFlipA 5s
+  animation: titleFlipA 3.5s
     cubic-bezier(.65, 0, .35, 1)
     infinite;
 }
 
 /* 두 번째 문구 */
 .hero-title-b {
-  animation: titleFlipB 5s
+  animation: titleFlipB 3.5s
     cubic-bezier(.65, 0, .35, 1)
     infinite;
 }
