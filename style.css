@@ -164,13 +164,12 @@ input {
   display: grid;
   grid-template-columns: 1.7fr .72fr;
   gap: 48px;
-  align-items: end;
+  align-items: start;
   margin: auto 0;
   padding: 52px 0 58px;
 }
 
 .hero-panel {
-  align-self: start;
   margin-top: 27px;
 }
 
